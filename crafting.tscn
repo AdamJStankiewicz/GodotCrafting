@@ -1,0 +1,130 @@
+[gd_scene load_steps=4 format=3 uid="uid://koldg7fxhd71"]
+
+[ext_resource type="Script" path="res://crafting.gd" id="1_oxdqj"]
+[ext_resource type="Script" path="res://table.gd" id="2_g6wx8"]
+[ext_resource type="Script" path="res://Button.gd" id="3_vbg7t"]
+
+[node name="crafting" type="Node2D"]
+script = ExtResource("1_oxdqj")
+
+[node name="Record" type="Button" parent="."]
+offset_left = -67.0
+offset_right = -34.0
+offset_bottom = 31.0
+text = "0
+"
+
+[node name="Name" type="TextEdit" parent="."]
+offset_top = 112.0
+offset_right = 100.0
+offset_bottom = 151.0
+
+[node name="Recipe" type="TextEdit" parent="."]
+offset_left = 106.0
+offset_right = 218.0
+offset_bottom = 150.0
+text = "Recipe:"
+
+[node name="Items" type="TextEdit" parent="."]
+offset_left = -238.0
+offset_top = 1.0
+offset_right = -100.0
+offset_bottom = 151.0
+text = "KEY
+Cobblestone: 1
+Plank: 2
+Stick: 3"
+editable = false
+
+[node name="table" type="Node2D" parent="."]
+script = ExtResource("2_g6wx8")
+
+[node name="0" type="Button" parent="table"]
+offset_right = 33.0
+offset_bottom = 31.0
+text = "0
+"
+script = ExtResource("3_vbg7t")
+
+[node name="1" type="Button" parent="table"]
+offset_left = 33.0
+offset_right = 66.0
+offset_bottom = 31.0
+text = "0
+"
+script = ExtResource("3_vbg7t")
+
+[node name="2" type="Button" parent="table"]
+offset_left = 66.0
+offset_right = 99.0
+offset_bottom = 31.0
+text = "0
+"
+script = ExtResource("3_vbg7t")
+
+[node name="3" type="Button" parent="table"]
+offset_top = 31.0
+offset_right = 33.0
+offset_bottom = 62.0
+text = "0
+"
+script = ExtResource("3_vbg7t")
+
+[node name="4" type="Button" parent="table"]
+offset_left = 33.0
+offset_top = 31.0
+offset_right = 66.0
+offset_bottom = 62.0
+text = "0
+"
+script = ExtResource("3_vbg7t")
+
+[node name="5" type="Button" parent="table"]
+offset_left = 66.0
+offset_top = 31.0
+offset_right = 99.0
+offset_bottom = 62.0
+text = "0
+"
+script = ExtResource("3_vbg7t")
+
+[node name="6" type="Button" parent="table"]
+offset_top = 62.0
+offset_right = 33.0
+offset_bottom = 93.0
+text = "0
+"
+script = ExtResource("3_vbg7t")
+
+[node name="7" type="Button" parent="table"]
+offset_left = 33.0
+offset_top = 62.0
+offset_right = 66.0
+offset_bottom = 93.0
+text = "0
+"
+script = ExtResource("3_vbg7t")
+
+[node name="8" type="Button" parent="table"]
+offset_left = 66.0
+offset_top = 62.0
+offset_right = 99.0
+offset_bottom = 93.0
+text = "0
+"
+script = ExtResource("3_vbg7t")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(32, 80)
+zoom = Vector2(2, 2)
+
+[connection signal="pressed" from="Record" to="table" method="_on_record_pressed"]
+[connection signal="pressed" from="table/0" to="table/0" method="_on_pressed"]
+[connection signal="pressed" from="table/1" to="table/1" method="_on_pressed"]
+[connection signal="pressed" from="table/2" to="table/2" method="_on_pressed"]
+[connection signal="pressed" from="table/3" to="table/3" method="_on_pressed"]
+[connection signal="pressed" from="table/4" to="table/4" method="_on_pressed"]
+[connection signal="pressed" from="table/5" to="table/5" method="_on_pressed"]
+[connection signal="pressed" from="table/6" to="table/6" method="_on_pressed"]
+[connection signal="pressed" from="table/7" to="table/7" method="_on_pressed"]
+[connection signal="pressed" from="table/8" to="table/8" method="_on_pressed"]
