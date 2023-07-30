@@ -12,5 +12,7 @@ config_version=5
 
 config/name="craft"
 run/main_scene="res://crafting.tscn"
+config/use_custom_user_dir=true
+config/custom_user_dir_name="CraftingSystem"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"

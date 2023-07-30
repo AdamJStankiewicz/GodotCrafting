@@ -16,16 +16,18 @@ func updateTable():
 			table[n] = int(get_child(n).text)
 			if table[n] != 0:
 				if items == 0:
-					recipe[items] = [crafting.items[table[n]],firstItem]
+					recipe[str(items)] = [crafting.items[table[n]],firstItem]
 					items += 1
 					firstItem = n
 				else:
-					recipe[items] = [crafting.items[table[n]],n - firstItem]
+					recipe[str(items)] = [crafting.items[table[n]],n - firstItem]
 					items += 1
 					
 		for n in crafting.recipeValues:
-			if crafting.recipeValues[n] == recipe:
-				$"../Recipe".text = str("RECIPE: \n", crafting.recipes[recipe])
+			if str(crafting.recipeValues[str(n)]) == str(recipe):
+				print("?")
+				$"../Recipe".text = str("RECIPE: \n", crafting.recipes[str(recipe)])
+
 	else:
 		items = 0
 		recipe = {}

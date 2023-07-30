@@ -7,35 +7,6 @@
 [node name="crafting" type="Node2D"]
 script = ExtResource("1_oxdqj")
 
-[node name="Record" type="Button" parent="."]
-offset_left = -67.0
-offset_right = -34.0
-offset_bottom = 31.0
-text = "0
-"
-
-[node name="Name" type="TextEdit" parent="."]
-offset_top = 112.0
-offset_right = 100.0
-offset_bottom = 151.0
-
-[node name="Recipe" type="TextEdit" parent="."]
-offset_left = 106.0
-offset_right = 218.0
-offset_bottom = 150.0
-text = "Recipe:"
-
-[node name="Items" type="TextEdit" parent="."]
-offset_left = -238.0
-offset_top = 1.0
-offset_right = -100.0
-offset_bottom = 151.0
-text = "KEY
-Cobblestone: 1
-Plank: 2
-Stick: 3"
-editable = false
-
 [node name="table" type="Node2D" parent="."]
 script = ExtResource("2_g6wx8")
 
@@ -114,11 +85,39 @@ text = "0
 "
 script = ExtResource("3_vbg7t")
 
+[node name="Record" type="Button" parent="."]
+offset_left = -67.0
+offset_right = -34.0
+offset_bottom = 31.0
+text = "0
+"
+
+[node name="Name" type="TextEdit" parent="."]
+offset_top = 112.0
+offset_right = 100.0
+offset_bottom = 151.0
+
+[node name="Recipe" type="TextEdit" parent="."]
+offset_left = 106.0
+offset_right = 218.0
+offset_bottom = 150.0
+text = "Recipe:"
+
+[node name="Items" type="TextEdit" parent="."]
+offset_left = -238.0
+offset_top = 1.0
+offset_right = -100.0
+offset_bottom = 151.0
+text = "KEY
+Cobblestone: 1
+Plank: 2
+Stick: 3"
+editable = false
+
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(32, 80)
 zoom = Vector2(2, 2)
 
-[connection signal="pressed" from="Record" to="table" method="_on_record_pressed"]
 [connection signal="pressed" from="table/0" to="table/0" method="_on_pressed"]
 [connection signal="pressed" from="table/1" to="table/1" method="_on_pressed"]
 [connection signal="pressed" from="table/2" to="table/2" method="_on_pressed"]
@@ -128,3 +127,4 @@ zoom = Vector2(2, 2)
 [connection signal="pressed" from="table/6" to="table/6" method="_on_pressed"]
 [connection signal="pressed" from="table/7" to="table/7" method="_on_pressed"]
 [connection signal="pressed" from="table/8" to="table/8" method="_on_pressed"]
+[connection signal="pressed" from="Record" to="table" method="_on_record_pressed"]
