@@ -9,11 +9,12 @@ var record = false
 	
 func updateTable():
 	if !record:
+		$"../Recipe".text = "RECIPE:"
 		items = 0
 		recipe = {}
 		firstItem = 0
 		for n in range(get_child_count()):
-			table[n] = int(get_child(n).text)
+			table[n] = int(get_child(n).num)
 			if table[n] != 0:
 				if items == 0:
 					recipe[str(items)] = [crafting.items[table[n]],firstItem]
@@ -22,12 +23,11 @@ func updateTable():
 				else:
 					recipe[str(items)] = [crafting.items[table[n]],n - firstItem]
 					items += 1
-					
+		print(recipe)
 		for n in crafting.recipeValues:
 			if str(crafting.recipeValues[str(n)]) == str(recipe):
-				print("?")
+				print(str(recipe))
 				$"../Recipe".text = str("RECIPE: \n", crafting.recipes[str(recipe)])
-
 	else:
 		items = 0
 		recipe = {}

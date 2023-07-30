@@ -15,4 +15,9 @@ run/main_scene="res://crafting.tscn"
 config/use_custom_user_dir=true
 config/custom_user_dir_name="CraftingSystem"
 config/features=PackedStringArray("4.1", "Forward Plus")
+boot_splash/bg_color=Color(0, 0, 0, 1)
 config/icon="res://icon.svg"
+
+[rendering]
+
+environment/defaults/default_clear_color=Color(0, 0, 0, 1)
