@@ -33,7 +33,7 @@ func updateTable():
 		recipe = {}
 		firstItem = 0
 		for n in range(get_child_count()):
-			table[n] = int(get_child(n).text)
+			table[n] = int(get_child(n).num)
 			if table[n] != 0:
 				if items == 0:
 					recipe[items] = [crafting.items[table[n]],firstItem]
@@ -46,12 +46,7 @@ func updateTable():
 func _on_record_pressed():
 	record = !record
 	
-	if record:
-		$"../Record".text = "1"
-		$"../Recipe".text = str("RECIPE: \n", "RECORDING")
-	else:
-		$"../Recipe".text = "RECIPE:"
+	if !record:
 		print(recipe)
 		print("NEW RECIPE SUBMITTED")
 		crafting.createRecipe(recipe,$"../Name".text)
-		$"../Record".text = "0"

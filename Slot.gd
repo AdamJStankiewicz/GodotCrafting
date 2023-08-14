@@ -3,12 +3,18 @@ extends Area2D
 @onready var table = $"../"
 var num = 0
 
-func _on_body_entered(body):
-	num = body.id
-	table.updateTable()
-	body.dragging = false
-	body.position = get_child(1).global_position
+var occupied = false
+
+func _on_area_entered(area):
+	if !occupied:
+		num = area.id
+		print(num)
+		table.updateTable()
+		occupied = true
 	
-func _on_body_exited(body):
-	num = 0
-	table.updateTable()
+
+func _on_area_exited(area):
+	if occupied:
+		num = 0
+		table.updateTable()
+		occupied = false

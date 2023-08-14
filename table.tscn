@@ -1,0 +1,93 @@
+[gd_scene load_steps=3 format=3 uid="uid://bf24tbgcs1gbh"]
+
+[ext_resource type="Script" path="res://table.gd" id="1_68rqw"]
+[ext_resource type="Script" path="res://Button.gd" id="2_btdyk"]
+
+[node name="table" type="Node2D"]
+position = Vector2(5, -197)
+script = ExtResource("1_68rqw")
+
+[node name="0" type="Button" parent="."]
+offset_right = 33.0
+offset_bottom = 31.0
+text = "0
+"
+script = ExtResource("2_btdyk")
+
+[node name="1" type="Button" parent="."]
+offset_left = 33.0
+offset_right = 66.0
+offset_bottom = 31.0
+text = "0
+"
+script = ExtResource("2_btdyk")
+
+[node name="2" type="Button" parent="."]
+offset_left = 66.0
+offset_right = 99.0
+offset_bottom = 31.0
+text = "0
+"
+script = ExtResource("2_btdyk")
+
+[node name="3" type="Button" parent="."]
+offset_top = 31.0
+offset_right = 33.0
+offset_bottom = 62.0
+text = "0
+"
+script = ExtResource("2_btdyk")
+
+[node name="4" type="Button" parent="."]
+offset_left = 33.0
+offset_top = 31.0
+offset_right = 66.0
+offset_bottom = 62.0
+text = "0
+"
+script = ExtResource("2_btdyk")
+
+[node name="5" type="Button" parent="."]
+offset_left = 66.0
+offset_top = 31.0
+offset_right = 99.0
+offset_bottom = 62.0
+text = "0
+"
+script = ExtResource("2_btdyk")
+
+[node name="6" type="Button" parent="."]
+offset_top = 62.0
+offset_right = 33.0
+offset_bottom = 93.0
+text = "0
+"
+script = ExtResource("2_btdyk")
+
+[node name="7" type="Button" parent="."]
+offset_left = 33.0
+offset_top = 62.0
+offset_right = 66.0
+offset_bottom = 93.0
+text = "0
+"
+script = ExtResource("2_btdyk")
+
+[node name="8" type="Button" parent="."]
+offset_left = 66.0
+offset_top = 62.0
+offset_right = 99.0
+offset_bottom = 93.0
+text = "0
+"
+script = ExtResource("2_btdyk")
+
+[connection signal="pressed" from="0" to="0" method="_on_pressed"]
+[connection signal="pressed" from="1" to="1" method="_on_pressed"]
+[connection signal="pressed" from="2" to="2" method="_on_pressed"]
+[connection signal="pressed" from="3" to="3" method="_on_pressed"]
+[connection signal="pressed" from="4" to="4" method="_on_pressed"]
+[connection signal="pressed" from="5" to="5" method="_on_pressed"]
+[connection signal="pressed" from="6" to="6" method="_on_pressed"]
+[connection signal="pressed" from="7" to="7" method="_on_pressed"]
+[connection signal="pressed" from="8" to="8" method="_on_pressed"]

@@ -1,7 +1,6 @@
 extends Node2D
 
 var recipeCount = 0
-var recipe = {}
 var recipeValues = {}
 var recipes = {}
 
@@ -46,8 +45,6 @@ func load_game():
 		var parse_result = json.parse(json_string)
 		var node_data = json.get_data()
 		
-		
 		recipes = node_data[0]
 		recipeValues = node_data[1]
-		print("DATA")
 		recipeCount = node_data[2]

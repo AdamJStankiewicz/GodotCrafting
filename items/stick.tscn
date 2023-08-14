@@ -1,10 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://8ncsd5nlffyi"]
+[gd_scene load_steps=3 format=3 uid="uid://376udvvmf87r"]
 
 [ext_resource type="Script" path="res://item.gd" id="1_xvfwi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mmrv6"]
 
-[node name="stick" type="CharacterBody2D"]
+[node name="stick" type="Area2D"]
 script = ExtResource("1_xvfwi")
 id = 3
 
@@ -17,7 +17,7 @@ offset_top = -10.0
 offset_right = 30.0
 offset_bottom = 30.0
 scale = Vector2(0.5, 0.5)
-color = Color(0.501961, 0.266667, 0.117647, 1)
+color = Color(0.517647, 0.294118, 0.14902, 1)
 
 [node name="Button" type="Button" parent="."]
 self_modulate = Color(1, 1, 1, 0)
@@ -26,5 +26,6 @@ offset_top = -10.0
 offset_right = 10.0
 offset_bottom = 10.0
 
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
 [connection signal="button_up" from="Button" to="." method="_on_button_button_up"]
